@@ -1,0 +1,4 @@
+# ignoring directories 
+Data/
+Program/output/
+Program/int_files/
