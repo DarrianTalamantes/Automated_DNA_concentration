@@ -5,7 +5,7 @@ output=$Home/output
 if [ ! -e $int_files ] ; then mkdir $int_files; fi
 if [ ! -e $output ] ; then mkdir $output; fi
 
-read -p "Input .csv of 4 columns, well, sample, intensity, concentration" infile
+read -p "Input .csv of 4 columns, Well, Sample, Intensity, Concentration." infile
 infile2="${infile:1:-1}"
 echo 
 echo 

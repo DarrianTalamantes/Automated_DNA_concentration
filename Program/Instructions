@@ -1,4 +1,4 @@
-Beofre Starting: Create a copy of Data_starter.csv and input the light intensity data and sample names into the copy.
+Beofre Starting: Create a copy of the corresponding Data_starter.csv and input the light intensity data and sample names into the copy. Standards should be denoted by std in the "Sample" column.
 
 Step 1: run the main program with this command ./Automated_DNA_Concentration.sh
 

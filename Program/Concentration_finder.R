@@ -1,18 +1,19 @@
 #!/usr/bin/env Rscript
 library(tidyverse)
 library(ggplot2)
+library(stringr)
 
 # # Argument inputs
 Args <- commandArgs(trailingOnly=TRUE)
 # grabbing light intensity data 
 data_table_comma <- read.table(Args[1], sep = ",", header = TRUE)
 dilution_factor <- as.integer(Args[2])
-# data_table_comma <- read.table("/home/drt83172/Documents/Automated_DNA_Concentration/Data/Test_data.csv", sep = ",", header = TRUE)
-# dilution_factor <- 20
+data_table_comma <- read.table("/home/drt83172/Documents/Automated_DNA_Concentration/Data/Test_data.csv", sep = ",", header = TRUE)
+dilution_factor <- 20
 
 # # splitting data up 
-std_data <- data_table_comma[row.names(data_table_comma) %in% 1:16,]
-sample_data <- data_table_comma[row.names(data_table_comma) %in% 17:nrow(data_table_comma),]
+std_data <- data_table_comma[data_table_comma$Sample == regex('std', ignore_case = TRUE), ]
+sample_data <- data_table_comma[data_table_comma$Sample != regex('std', ignore_case = TRUE),]
 
 # # finding the sum of X*Y
 std_data$xy <- std_data[,3]*std_data[,4]
