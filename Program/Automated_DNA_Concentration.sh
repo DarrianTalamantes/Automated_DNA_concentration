@@ -15,4 +15,5 @@ echo "Running analysis now"
 
 ./Concentration_finder.R $infile2 $dilution 
 mv *.png output/
+rm *.pdf
 mv DNA_Concentrations.csv output/
