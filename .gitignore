@@ -1,0 +1,8 @@
+# ignoring directories 
+Data/
+Program/output/
+Program/int_files/
+DNA_Concentration_files_2024/
+DNA_concentration_files/
+Program/output/
+

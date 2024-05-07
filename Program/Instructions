@@ -1,0 +1,8 @@
+Beofre Starting: Create a copy of the corresponding Data_starter.csv and input the light intensity data and sample names into the copy. Standards should be denoted by std in the "Sample" column.
+
+Step 1: run the main program with this command ./Automated_DNA_Concentration.sh
+
+Step 2: drag and drop data file into terminal when prompted.
+File should be .csv with headers well,sample,intensity,concentration
+
+Step 3: The program will then call the R portion and calculate m and b using the standards which should be the first 16 samples. It will then output the rest of the samples with their concentrations out in the output folder. 
